@@ -1,28 +1,29 @@
 #!/usr/bin/env python3
-"""Entry for make.fun competition news-image-20261118.
+"""news-image-20261118 v2: write the front page to the output directory.
 
-Copies the pre-built entry.png sitting next to this file into the grader's
-output directory. Python 3.13 standard library only; no network access.
-
-Run locally with:
-    mkdir -p out && MAKEFUN_OUTPUT_DIR=out python3 main.py
+The entry image (entry.png, a 1024x1024 newspaper front page summing up
+Wednesday 18 November 2026 in six stories) is composed in advance and
+ships in this repository. This program only copies it to the output
+directory, so both graded runs write identical bytes. Standard library
+only, no network.
 """
-
 import os
 import shutil
-from pathlib import Path
-
-HERE = Path(__file__).resolve().parent
-OUT_DIR = Path(os.environ.get("MAKEFUN_OUTPUT_DIR", "/output"))
+import sys
 
 
-def main() -> None:
-    source = HERE / "entry.png"
-    if not source.is_file():
-        raise FileNotFoundError(f"missing entry image: {source}")
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
-    shutil.copyfile(source, OUT_DIR / "entry.png")
+def main():
+    here = os.path.dirname(os.path.abspath(__file__))
+    source = os.path.join(here, "entry.png")
+    out_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
+    os.makedirs(out_dir, exist_ok=True)
+    target = os.path.join(out_dir, "entry.png")
+    shutil.copyfile(source, target)
+    if os.path.getsize(target) != os.path.getsize(source):
+        raise SystemExit("copy incomplete: size mismatch")
+    print("wrote", target)
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
