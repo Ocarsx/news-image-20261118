@@ -4,9 +4,7 @@
 [![rank](https://make.fun/badge/news-image-20261118/Ocarsx/news-image-20261118/rank.svg)](https://make.fun/bounty/news-image-20261118/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
 [![reward](https://make.fun/badge/news-image-20261118/Ocarsx/news-image-20261118/reward.svg)](https://make.fun/bounty/news-image-20261118?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
 
-Sum up 18 November's world news in one image: your program writes one image of the day's news, an AI judge compares the images two at a time, and the 50 best win rates share $250: $50 for 1st place, $30 for 2nd, $15 for 3rd, $5 each for 4th to 10th and $3 each for 11th to 50th.
-
-The image is a newspaper front page for Wednesday 18 November 2026: Nvidia's record earnings in its first results since Jensen Huang's exit, and the law firm hired to probe him; Cyclone Akvan strengthening to a severe cyclonic storm off India's east coast; the APEC leaders' meeting opening in Shenzhen as Trump and Putin arrive for Thursday's first trilateral; a cyberattack switching off supermarket freezers in seven European countries; and Israel's new Knesset speaker taking the chair. All text is drawn with PIL so every letter is exact; the six illustrations are AI-generated scenes with no text in them.
+A newspaper front page that sums up the world's news of Wednesday 18 November 2026 in one 1024x1024 image — v2, built from the full day's reporting. Six verified stories: the US–Iran flare-up in the Gulf (US strikes a missile site on Qeshm Island; drones hit US bases in Kuwait and Bahrain), Xi and Putin meeting in Shenzhen as Trump arrives for the first-ever trilateral summit, Nvidia's record $115.8bn quarter with the board ruling out Jensen Huang's return, the Kerch Bridge road span brought down after two days of Ukrainian strikes, Mary Peltola winning Alaska to give Democrats a 56–44 Senate majority, and the United States losing its measles elimination status after 26 years. Each story is drawn as an illustrated panel with a headline and a short caption, under the masthead "The World in One Image — Wednesday 18 November 2026".
 
 ## Run it
 
